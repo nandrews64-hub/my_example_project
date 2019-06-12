@@ -5,12 +5,15 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
+import Foo from "../../my_components/Foo"
+import Bar from "../../my_components/Bar"
 
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
   .add('foo things', () => <Foo/>)
+  .add('bar stuff', () => <Bar/>)
   .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
   .add('with some emoji', () => (
     <Button onClick={action('clicked')}>
